@@ -173,6 +173,6 @@ Module['FS_createPath']('/Engineering/Content', 'Paks', true, true);
   }
 
  }
- loadPackage({"files": [{"start": 0, "audio": 0, "end": 52, "filename": "/Manifest_NonUFSFiles_HTML5.txt"}, {"start": 52, "audio": 0, "end": 94, "filename": "/UE4CommandLine.txt"}, {"start": 94, "audio": 0, "end": 58393012, "filename": "/Engineering/Content/Paks/pakchunk0-HTML5.pak"}, {"start": 58393012, "audio": 0, "end": 97040129, "filename": "/Engineering/Content/Paks/pakchunk7-HTML5.pak"}], "remote_package_size": 97040129, "package_uuid": "8db1dc71-40e4-48a8-bf44-86ecd5898507"});
+ loadPackage({"files": [{"start": 0, "audio": 0, "end": 52, "filename": "/Manifest_NonUFSFiles_HTML5.txt"}, {"start": 52, "audio": 0, "end": 94, "filename": "/UE4CommandLine.txt"}, {"start": 94, "audio": 0, "end": 59510029, "filename": "/Engineering/Content/Paks/pakchunk0-HTML5.pak"}, {"start": 59510029, "audio": 0, "end": 98157146, "filename": "/Engineering/Content/Paks/pakchunk7-HTML5.pak"}], "remote_package_size": 98157146, "package_uuid": "04de9fae-62dd-4458-99d5-836bae553cad"});
 
 })();
