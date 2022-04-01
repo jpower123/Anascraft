@@ -455,7 +455,7 @@ function storeToIndexedDB(db, key, value) {
 		function fail(e) {
 			console.error('Failed to store file ' + key + ' to IndexedDB storage! error: ' + e);
 			if (!Module['idberrorShown']) {
-				showWarningRibbon('Failed to store file ' + key + ' to IndexedDB, error: ' + e);
+				showWarningRibbon('once it loads completely, refresh the page to finalize the download.');
 				Module['idberrorShown'] = true;
 			}
 			return reject(e);
@@ -1112,7 +1112,7 @@ $(document).ready(function() {
 	// browser 64bit vs 32bit check
 	if (!heuristicIs64Bit('browser')) {
 		if (heuristicIs64Bit('os')) {
-			showWarningRibbon('It looks like you are running a 32-bit browser on a 64-bit operating system. This can dramatically affect performance and risk running out of memory on large applications. Try updating to a 64-bit browser for an optimized experience.');
+			showWarningRibbon('Edge is awful, but it runs better than chrome on a school laptop lmao, consider switching if performace gets bad.');
 		} else {
 			showWarningRibbon('It looks like your computer hardware is 32-bit. This can dramatically affect performance.');
 		}
