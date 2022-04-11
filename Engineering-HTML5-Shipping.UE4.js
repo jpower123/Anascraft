@@ -73,7 +73,7 @@ var Module = {
 	assetDownloadProgress: {}, // Track how many bytes of each needed asset has been downloaded so far.
 
 	UE4_indexedDBName: 'UE4_assetDatabase_Engineering', // this should be an ascii ID string without special characters that is unique to the project that is being packaged
-	UE4_indexedDBVersion: 202204010032, // Bump this number to invalidate existing IDB storages in browsers.
+	UE4_indexedDBVersion: 202204110157, // Bump this number to invalidate existing IDB storages in browsers.
 };
 
 
@@ -455,7 +455,7 @@ function storeToIndexedDB(db, key, value) {
 		function fail(e) {
 			console.error('Failed to store file ' + key + ' to IndexedDB storage! error: ' + e);
 			if (!Module['idberrorShown']) {
-				showWarningRibbon('once it loads completely, refresh the page to finalize the download.');
+				showWarningRibbon('Failed to store file ' + key + ' to IndexedDB, error: ' + e);
 				Module['idberrorShown'] = true;
 			}
 			return reject(e);
@@ -1112,7 +1112,7 @@ $(document).ready(function() {
 	// browser 64bit vs 32bit check
 	if (!heuristicIs64Bit('browser')) {
 		if (heuristicIs64Bit('os')) {
-			showWarningRibbon('Edge is awful, but it runs better than chrome on a school laptop lmao, consider switching if performace gets bad.');
+			showWarningRibbon('It looks like you are running a 32-bit browser on a 64-bit operating system. This can dramatically affect performance and risk running out of memory on large applications. Try updating to a 64-bit browser for an optimized experience.');
 		} else {
 			showWarningRibbon('It looks like your computer hardware is 32-bit. This can dramatically affect performance.');
 		}
